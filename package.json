@@ -1,28 +1,66 @@
 {
-  "name": "noto",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+  "name": "noto-notes-app",
+  "version": "1.0.0",
+  "description": "Capture Quickly. Remember Forever. Noto is a fast, minimal, and elegant note-taking app.",
+  "author": "Chaklesh Yadav <chaklesh49@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://chaklesh.github.io/noto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaklesh/noto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chaklesh/noto/issues"
+  },
+  "keywords": [
+    "react",
+    "notes",
+    "todo",
+    "keep",
+    "productivity",
+    "responsive",
+    "tailwind-css",
+    "local-storage",
+    "note-taking",
+    "minimal",
+    "elegant"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "version:patch": "npm version patch && git push && git push --tags",
+    "version:minor": "npm version minor && git push && git push --tags",
+    "version:major": "npm version major && git push && git push --tags",
+    "release": "npm run build && npm run version:patch",
+    "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.4",
+    "webpack-bundle-analyzer": "^4.7.0"
   },
   "browserslist": {
     "production": [
