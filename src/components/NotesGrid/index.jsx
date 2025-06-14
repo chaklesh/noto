@@ -1,9 +1,12 @@
-import { useState } from 'react';
-import { NoteCard } from '../NoteCard';
-import { NoteEditor } from '../NoteEditor';
-import { useNotes } from '../../contexts/NotesContext';
+import { useState } from "react";
+import { NoteCard } from "../NoteCard";
+import { NoteEditor } from "../NoteEditor";
+import { useNotes } from "../../contexts/NotesContext";
 
-export const NotesGrid = ({ notes, emptyMessage = "No notes found" }) => {
+export const NotesGrid = ({
+  notes,
+  emptyMessage = "No notes found",
+}) => {
   const [selectedNote, setSelectedNote] = useState(null);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
   const { reorderNotes } = useNotes();
@@ -19,7 +22,7 @@ export const NotesGrid = ({ notes, emptyMessage = "No notes found" }) => {
   };
 
   const handleDragStart = (e, index) => {
-    e.dataTransfer.setData('text/plain', index.toString());
+    e.dataTransfer.setData("text/plain", index.toString());
   };
 
   const handleDragOver = (e) => {
@@ -28,8 +31,8 @@ export const NotesGrid = ({ notes, emptyMessage = "No notes found" }) => {
 
   const handleDrop = (e, dropIndex) => {
     e.preventDefault();
-    const dragIndex = parseInt(e.dataTransfer.getData('text/plain'));
-    
+    const dragIndex = parseInt(e.dataTransfer.getData("text/plain"));
+
     if (dragIndex !== dropIndex) {
       const newNotes = [...notes];
       const draggedNote = newNotes[dragIndex];
@@ -42,9 +45,15 @@ export const NotesGrid = ({ notes, emptyMessage = "No notes found" }) => {
   if (notes.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-64 text-gray-500 px-4">
-        <span className="material-icons text-4xl md:text-6xl mb-4 text-gray-300">note_add</span>
-        <p className="text-base md:text-lg font-medium text-center">{emptyMessage}</p>
-        <p className="text-sm md:text-base mt-2 text-center">Create your first note to get started</p>
+        <span className="material-icons text-4xl md:text-6xl mb-4 text-gray-300">
+          note_add
+        </span>
+        <p className="text-base md:text-lg font-medium text-center">
+          {emptyMessage}
+        </p>
+        <p className="text-sm md:text-base mt-2 text-center">
+          Create your first note to get started
+        </p>
       </div>
     );
   }
@@ -61,14 +70,11 @@ export const NotesGrid = ({ notes, emptyMessage = "No notes found" }) => {
             onDrop={(e) => handleDrop(e, index)}
             className="transition-transform"
           >
-            <NoteCard
-              note={note}
-              onEdit={handleEditNote}
-            />
+            <NoteCard note={note} onEdit={handleEditNote} />
           </div>
         ))}
       </div>
-
+     
       <NoteEditor
         note={selectedNote}
         isOpen={isEditorOpen}

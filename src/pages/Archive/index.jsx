@@ -56,7 +56,21 @@ export const Archive = () => {
                     </div>
                 </main>
             </div>
-
+            <button
+                onClick={handleNewNote}
+                className="fixed bottom-6 right-6 
+                flex items-center justify-center gap-2 
+                bg-indigo-600 hover:bg-indigo-700 
+                text-white 
+                px-4 py-3 
+                rounded-full 
+                transition-all duration-200 
+                shadow-lg hover:shadow-xl 
+                z-50
+                hover:scale-105 active:scale-95"
+            >
+        <span className="material-icons">add</span>
+      </button>
             <NoteEditor
                 isOpen={isNewNoteOpen}
                 onClose={() => setIsNewNoteOpen(false)}
