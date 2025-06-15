@@ -1,6 +1,6 @@
 {
   "name": "noto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Capture Quickly. Remember Forever. Noto is a fast, minimal, and elegant note-taking app.",
   "author": "Chaklesh Yadav <chaklesh49@gmail.com>",
   "license": "MIT",
@@ -63,7 +63,6 @@
     "prettier": "^2.8.4",
     "webpack-bundle-analyzer": "^4.7.0",
     "tailwindcss": "^3.4.17"
-
   },
   "browserslist": {
     "production": [
