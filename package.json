@@ -4,7 +4,7 @@
   "description": "Capture Quickly. Remember Forever. Noto is a fast, minimal, and elegant note-taking app.",
   "author": "Chaklesh Yadav <chaklesh49@gmail.com>",
   "license": "MIT",
-  "homepage": "https://chaklesh.github.io/noto",
+  "homepage": ".",
   "repository": {
     "type": "git",
     "url": "https://github.com/chaklesh/noto.git"
