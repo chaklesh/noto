@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PWA (Progressive Web App) features
 - Multi-language support
 
-## [1.0.0] - 2024-01-15
+## [1.0.0] - 202-06-13
 
 ### 🎉 Initial Release
 The first stable release of **Noto** - a fast, minimal, and elegant note-taking app built by **Chaklesh Yadav**.
@@ -67,7 +67,7 @@ The first stable release of **Noto** - a fast, minimal, and elegant note-taking 
 - **Development Tools**: ESLint, Prettier, and comprehensive testing setup
 - **CI/CD Pipeline**: Automated testing and deployment with GitHub Actions
 
-## [0.1.0] - 2024-01-01
+## [0.1.0] - 2025-05-25
 
 ### 🛠️ Project Foundation
 - **Initial Setup**: React app initialization with Create React App
@@ -104,19 +104,19 @@ The first stable release of **Noto** - a fast, minimal, and elegant note-taking 
 
 ## 🚀 Future Roadmap
 
-### Version 1.1.0 (Q2 2024)
+### Version 1.1.0 
 - [ ] Dark mode implementation
 - [ ] Enhanced search with filters
 - [ ] Note export functionality
 - [ ] Keyboard shortcuts help modal
 
-### Version 1.2.0 (Q3 2024)
+### Version 1.2.0 
 - [ ] Rich text editor with markdown support
 - [ ] Tag system for advanced organization
 - [ ] Note templates
 - [ ] Improved mobile gestures
 
-### Version 2.0.0 (Q4 2024)
+### Version 2.0.0 
 - [ ] Cloud sync integration
 - [ ] Collaborative editing features
 - [ ] Advanced theming system
